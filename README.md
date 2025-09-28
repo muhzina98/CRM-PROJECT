@@ -1,73 +1,116 @@
 # CRM System (MERN Stack)
 
-A full-stack **Customer Relationship Management (CRM)** system built
-with **MongoDB, Express, React, and Node.js (MERN)**.
+This is a **Customer Relationship Management (CRM)** system built with the MERN stack.  
+It allows admins to **create, read, update, and delete (CRUD)** customer records.
 
-## 🚀 Features
+---
 
--   View all customers
--   Add new customers
--   Update existing customers
--   Delete customers
--   View a single customer by ID
--   Responsive dashboard
+## 📌 Features
+- 🔑 User authentication (login, JWT)
+- 👥 Manage customers (CRUD)
+- 📝 Notes, company, phone, and email tracking
+- 📦 Scalable backend with Express & MongoDB
+- ⚛️ Modern frontend with React, Redux Toolkit & Tailwind CSS
+- 🔄 REST API integration with Axios
 
-## 🛠 Tech Stack
+---
 
--   **Frontend:** React, Redux Toolkit, Axios, TailwindCSS
--   **Backend:** Node.js, Express.js, MongoDB, Mongoose
--   **State Management:** Redux Toolkit (Async Thunks)
--   **API Calls:** Axios
+## 📂 Project Structure
 
-
-
-## ⚙️ API Endpoints
-
-  Method   Endpoint               Description
-  -------- ---------------------- -----------------------
-  GET      `/api/customers`       Get all customers
-  GET      `/api/customers/:id`   Get a customer by ID
-  POST     `/api/customers`       Create a new customer
-  PUT      `/api/customers/:id`   Update a customer
-  DELETE   `/api/customers/:id`   Delete a customer
-
-## 🖥 Installation
-
-1.  Clone the repo:
-
-
-git clone https://github.com/your-username/crm-mern.git
-cd crm-mern
-
-
-2.  Install dependencies for both backend and frontend:
-
-``` bash
-cd backend && npm install
-cd ../frontend && npm install
+```
+crm-project/
+│
+├── backend/
+│   ├── controllers/
+│   │   └── customerController.js
+│   ├── models/
+│   │   └── customerModel.js
+│   ├── routes/
+│   │   └── customerRoutes.js
+│   ├── middlewares/
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── api/axiosClient.js
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── redux/slices/customerSlice.js
+│   │   ├── redux/store.js
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+└── README.md
 ```
 
-3.  Create a `.env` file in the backend folder:
+---
 
-``` env
-MONGO_URI=your_mongodb_connection_string
-PORT=3000
-JWT_SECRET=your_secret_key
+## ⚙️ Installation
+
+### 1️⃣ Clone repository
+```bash
+git clone https://github.com/your-username/crm-project.git
+cd crm-project
 ```
 
-4.  Run the development servers:
-
-``` bash
-# Backend
+### 2️⃣ Setup Backend
+```bash
 cd backend
-npm run dev
+npm install
+```
 
-# Frontend
-cd ../frontend
+Create a `.env` file inside `backend/`:
+```env
+PORT=3000
+MONGO_URI=mongodb://127.0.0.1:27017/crmdb
+JWT_SECRET=your_jwt_secret_here
+```
+
+Run backend:
+```bash
 npm run dev
 ```
 
-5.  Open `http://localhost:5173` (or the port Vite shows) in your
-    browser.
+### 3️⃣ Setup Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
+---
+
+## 🚀 API Endpoints
+
+Base URL: `http://localhost:3000/api/customers`
+
+| Method | Endpoint             | Description          |
+|--------|----------------------|----------------------|
+| GET    | `/`                  | Get all customers    |
+| GET    | `/:id`               | Get customer by ID   |
+| POST   | `/`                  | Create new customer  |
+| PUT    | `/:id`               | Update customer      |
+| DELETE | `/:id`               | Delete customer      |
+
+---
+
+## 🖥️ Frontend
+
+- React + Vite
+- Redux Toolkit for state management
+- Axios for API calls
+- Tailwind CSS for styling
+
+---
+
+## ✅ Usage
+
+1. Start backend (`npm run dev` in `/backend`)
+2. Start frontend (`npm run dev` in `/frontend`)
+3. Open browser: [http://localhost:5173](http://localhost:5173)
+4. Manage customers from dashboard & customer page.
+
+---
 
