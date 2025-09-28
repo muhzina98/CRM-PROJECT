@@ -5,7 +5,7 @@ import LoginPage from "./pages/LoginPage";
  import RegisterPage from "./pages/RegisterPage";
 import Dashboard from "./pages/Dashboard";
 import CustomersPage from "./pages/CustomerPage";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/protectedRoute";
 
 
 export default function App() {
