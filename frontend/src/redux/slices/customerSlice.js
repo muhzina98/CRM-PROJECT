@@ -33,7 +33,7 @@ export const deleteCustomerThunk = createAsyncThunk(
   "customers/delete",
   async (id) => {
     await axiosClient.delete(`/customers/${id}`);
-    return id; // so we can remove it from state
+    return id; 
   }
 );
 

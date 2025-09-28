@@ -3,9 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../redux/slices/authSlice";
 
-/**
- * Bootstrap navbar that shows different options based on auth state.
- */
+
 export default function Header() {
   const auth = useSelector((s) => s.auth);
   const dispatch = useDispatch();
