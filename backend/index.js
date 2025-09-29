@@ -14,7 +14,7 @@ connectDatabase()
 const app=express()
 
 app.use(cors({
-  origin: "https://crm-project-uzrc-git-main-muhzina98s-projects.vercel.app",
+  origin: "https://crm-project-ji1q.vercel.app",
   credentials: true
 }));
 app.use(express.json())
