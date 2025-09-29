@@ -25,6 +25,10 @@ app.use("/api/customers", customerRouter);
 
 
 app.use(globalErrorHandler);
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 
 
 app.listen(process.env.PORT,()=>{
